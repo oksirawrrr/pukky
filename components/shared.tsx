@@ -65,7 +65,7 @@ export function Brand({ compact = false }: { compact?: boolean }) {
       </div>
       {!compact && (
         <div className="leading-none">
-          <p className="font-display text-lg font-semibold uppercase tracking-[0.2em]">VAULT-9</p>
+          <p className="font-display text-lg font-semibold uppercase tracking-[0.2em]">BRANGKAS MX</p>
           <p className="text-[11px] uppercase tracking-widest text-muted-foreground">Brankas &amp; Inventaris</p>
         </div>
       )}

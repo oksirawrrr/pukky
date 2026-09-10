@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const oswald = Oswald({ subsets: ['latin'], variable: '--font-oswald' })
 
 export const metadata: Metadata = {
-  title: 'VAULT-9 · Brankas & Inventaris',
+  title: 'BRANGKAS MX · Brankas & Inventaris',
   description:
     'Sistem manajemen brankas dan inventaris terenkripsi — katalog stok, transaksi, dan ledger untuk member & admin.',
   generator: 'v0.app',
