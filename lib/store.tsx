@@ -69,7 +69,7 @@ const SEED_ITEMS: Item[] = [
 
 const SEED_USERS: User[] = [
   { id: "u_admin", name: "Overseer", pin: "9999", role: "admin" },
-  { id: "u1", name: "Vega", pin: "1234", role: "member" },
+  { id: "u1", name: "pukky", pin: "1234", role: "member" },
   { id: "u2", name: "Rook", pin: "1111", role: "member" },
   { id: "u3", name: "Kilo", pin: "2222", role: "member" },
   { id: "u4", name: "Nyx", pin: "3333", role: "member" },
