@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { ChevronDown, Delete, ShieldCheck } from "lucide-react"
+import { ChevronDown, Delete } from "lucide-react"
 import { useStore } from "@/lib/store"
 import { cn } from "@/lib/utils"
 import { Brand, ThemeToggle } from "@/components/shared"
@@ -66,8 +66,8 @@ export function LoginScreen() {
           )}
         >
           <div className="relative flex flex-col items-center bg-primary px-6 pb-14 pt-8 text-primary-foreground">
-            <div className="flex h-16 w-16 items-center justify-center rounded-full border border-primary-foreground/30 bg-primary-foreground/10">
-              <ShieldCheck className="h-7 w-7" />
+            <div className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-full border border-primary-foreground/30 bg-white">
+              <img src="/images/mx-logo.png" alt="MX Brangkas" className="h-full w-full object-contain p-1" />
             </div>
             <div className="absolute -bottom-6 left-1/2 h-12 w-[130%] -translate-x-1/2 rounded-[100%] bg-card" />
           </div>

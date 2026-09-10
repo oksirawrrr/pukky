@@ -1,7 +1,7 @@
 "use client"
 
 import { cn } from "@/lib/utils"
-import { Moon, Shield, Sun } from "lucide-react"
+import { Moon, Sun } from "lucide-react"
 import type { Category, TxStatus } from "@/lib/store"
 import { useStore } from "@/lib/store"
 
@@ -92,12 +92,12 @@ export function ThemeToggle({ variant = "icon" }: { variant?: "icon" | "pill" })
 export function Brand({ compact = false }: { compact?: boolean }) {
   return (
     <div className="flex items-center gap-2.5">
-      <div className="flex h-9 w-9 items-center justify-center rounded-md bg-primary text-primary-foreground">
-        <Shield className="h-5 w-5" />
+      <div className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-md border border-border bg-white">
+        <img src="/images/mx-logo.png" alt="MX Brangkas" className="h-full w-full object-contain" />
       </div>
       {!compact && (
         <div className="leading-none">
-          <p className="font-display text-lg font-semibold uppercase tracking-[0.2em]">4B BRANGKAS</p>
+          <p className="font-display text-lg font-semibold uppercase tracking-[0.2em]">MX BRANGKAS</p>
           <p className="text-[11px] uppercase tracking-widest text-muted-foreground">Brankas &amp; Inventaris</p>
         </div>
       )}
