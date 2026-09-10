@@ -71,6 +71,9 @@ const SEED_USERS: User[] = [
   { id: "u_admin", name: "Overseer", pin: "9999", role: "admin" },
   { id: "u1", name: "Vega", pin: "1234", role: "member" },
   { id: "u2", name: "Rook", pin: "1111", role: "member" },
+  { id: "u3", name: "Kilo", pin: "2222", role: "member" },
+  { id: "u4", name: "Nyx", pin: "3333", role: "member" },
+  { id: "u5", name: "Dozer", pin: "4444", role: "member" },
 ]
 
 const SEED_TX: Transaction[] = [
@@ -101,7 +104,7 @@ type StoreValue = {
   theme: "dark" | "light"
   toggleTheme: () => void
   currentUser: User | null
-  login: (pin: string) => { ok: boolean; error?: string }
+  login: (userId: string, pin: string) => { ok: boolean; error?: string }
   logout: () => void
   items: Item[]
   users: User[]
@@ -144,9 +147,10 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   }, [])
 
   const login = useCallback(
-    (pin: string) => {
-      const found = users.find((u) => u.pin === pin.trim())
-      if (!found) return { ok: false, error: "PIN tidak dikenali." }
+    (userId: string, pin: string) => {
+      const found = users.find((u) => u.id === userId)
+      if (!found) return { ok: false, error: "Pilih nama pengguna terlebih dahulu." }
+      if (found.pin !== pin.trim()) return { ok: false, error: "PIN salah untuk pengguna ini." }
       setCurrentUser(found)
       setCart([])
       return { ok: true }
